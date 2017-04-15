@@ -5,21 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tabian.com.actionbartest.MainActivity">
-
+    tools:context="tabian.com.actionbar.MainActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/relLayout">
-
+        android:layout_height="match_parent">
 
         <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/relLayoutTopBar"
-        android:layout_alignParentTop="true">
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/topBar">
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -40,56 +36,49 @@
         </RelativeLayout>
 
 
+
+
         <RelativeLayout
+            android:layout_below="@+id/topBar"
+            android:layout_above="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/relLayoutMiddle"
-            android:layout_below="@+id/relLayoutTopBar"
-            android:layout_above="@+id/relLayoutBotBar">
+            >
 
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/container">
-
+                android:id="@+id/container"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             </android.support.v4.view.ViewPager>
 
-
         </RelativeLayout>
+
+
+
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/relLayoutBotBar"
+            android:id="@+id/bottomBar"
             android:layout_alignParentBottom="true">
 
-
             <android.support.design.widget.BottomNavigationView
-                android:id="@+id/bottomNavView_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/bottomNavView_Bar"
                 android:background="@drawable/white_grey_border_top"
                 app:menu="@menu/bottom_navigation_menu">
 
 
             </android.support.design.widget.BottomNavigationView>
-
         </RelativeLayout>
 
 
 
-
-
-
-
     </RelativeLayout>
-
-
-
-
-
 
 
 
